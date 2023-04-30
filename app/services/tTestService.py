@@ -34,10 +34,10 @@ class TTest:
     def paired(preDataValues, postDataValues, alternative):
         preDataValues = TTest.listValues(preDataValues)
         postDataValues = TTest.listValues(postDataValues)
-        
+
         tStatistic, pValue = stats.ttest_rel(preDataValues, postDataValues, alternative=alternative)
-        
+
         return jsonify(tStatistic = tStatistic, pValue = pValue)
-        
+
         
         
