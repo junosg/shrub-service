@@ -19,6 +19,10 @@ def oneSampleTTest():
 def indSampleTTest():
    return tTest.independent(request.args.get('groupsValues'), request.args.get('dataValues'), request.args.get('groups'), request.args.get('equalVariance'), request.args.get('alternative'))
 
+@app.route('/pairedSampleTTest', methods=['POST'])
+def pairedSampleTTest():
+   return tTest.paired(request.args.get('preDataValues'), request.args.get('postDataValues'), request.args.get('alternative'))
+
 @app.route('/')
 def hello_world():
    return "test"

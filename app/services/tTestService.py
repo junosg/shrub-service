@@ -30,7 +30,14 @@ class TTest:
         tStatistic, pValue = stats.ttest_ind(group1['value'], group2['value'], equal_var=equalVariance.lower()=='true', alternative=alternative)
 
         return jsonify(tStatistic = tStatistic, pValue = pValue, leftHand=groups[0], rightHand=groups[1])
+
+    def paired(preDataValues, postDataValues, alternative):
+        preDataValues = TTest.listValues(preDataValues)
+        postDataValues = TTest.listValues(postDataValues)
         
+        tStatistic, pValue = stats.ttest_rel(preDataValues, postDataValues, alternative=alternative)
+        
+        return jsonify(tStatistic = tStatistic, pValue = pValue)
         
         
         
