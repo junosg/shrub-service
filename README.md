@@ -1,2 +1,2 @@
 # Lotus
-Lotus: a free, student-friendly, statistical tool.
+A free, student-friendly, statistical tool.
