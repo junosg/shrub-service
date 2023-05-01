@@ -18,16 +18,12 @@ A free, student-friendly, statistical tool.
 
 
     `venv\scripts\activate`
-4.  Install flask
+4.  Install dependencies
 
 
     `pip install flask`
-5.  Install pandas
-
 
     `pip install pandas`
-6.  Install scipy
-
 
     `pip install scipy`
 
