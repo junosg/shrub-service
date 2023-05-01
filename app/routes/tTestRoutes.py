@@ -6,11 +6,11 @@ tTest = tTestService.TTest
 
 @tTestRoutes.route('/oneSampleTTest', methods=['POST'])
 def oneSampleTTest():
-   return tTest.oneSample(request.args.get('data'), request.args.get('popMean'), request.args.get('alternative'))
+   return tTest.oneSample(request.args.get('dataValues'), request.args.get('popMean'), request.args.get('alternative'))
 
 @tTestRoutes.route('/indSampleTTest', methods=['POST'])
 def indSampleTTest():
-   return tTest.independent(request.args.get('groupsValues'), request.args.get('dataValues'), request.args.get('groups'), request.args.get('equalVariance'), request.args.get('alternative'))
+   return tTest.independent(request.args.get('groupValues'), request.args.get('dataValues'), request.args.get('groups'), request.args.get('equalVariance'), request.args.get('alternative'))
 
 @tTestRoutes.route('/pairedSampleTTest', methods=['POST'])
 def pairedSampleTTest():

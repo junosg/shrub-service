@@ -16,8 +16,8 @@ class TTest:
         tStatistic, pValue = stats.ttest_1samp(a=valuesList, popmean=float(popMean), alternative=alternative)
         return jsonify(tStatistic = tStatistic, pValue = pValue) 
     
-    def independent(dataGroups, dataValues, groups, equalVariance, alternative):
-        groupsList = dataGroups.split(',')
+    def independent(groupValues, dataValues, groups, equalVariance, alternative):
+        groupsList = groupValues.split(',')
         groups = groups.split(',')
 
         valuesList = TTest.listValues(dataValues)

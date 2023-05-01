@@ -1,11 +1,11 @@
 import pandas
 
 class Descriptive:
-    def summary(data, scale):
-        newData = data.split(",")
-        
-        if scale == 'ordinal' or scale == 'ratio':
-            newData = [eval(value) for value in newData]
+    def summary(values, scale):
+        valuesList = values.split(",")
 
-        x = pandas.Series(newData)
+        if scale == 'ordinal' or scale == 'ratio':
+            valuesList = [eval(value) for value in valuesList]
+
+        x = pandas.Series(valuesList)
         return x.describe().to_json()
