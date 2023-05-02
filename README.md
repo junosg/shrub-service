@@ -20,29 +20,29 @@ A free, student-friendly, statistical tool.
 ## Routes ##
 ### Descriptive Statistics ###
 ___
-@Summary <br />
+**@Summary** <br />
+*Describes the leaf (dataset)* <br />
 route: `/summary` <br />
-description: describes the leaf (dataset) <br />
 parameters: <br />
-   *    data: the values to be described <br />
+   *    data: the data to be described <br />
    *    scale: the level of measurement of the data **( nominal, ordinal, interval, ratio )** <br />
 <br />
 
 ### Inferential Statistics ###
 ___
 ### T-Test ###
-@One Sample T-test <br />
-route: `/oneSampleTTest` <br/>
-description: performs one sample t-test on a specified interval or ratio leaf <br />
+**@One Sample T-test** <br />
+*Performs one sample t-test on a specified interval or ratio leaf* <br />
+route: `/oneSampleTTest` <br/> 
 parameters: <br />
    *   numericData: interval or ratio scale values to be tested on <br />
    *   popMean: population mean to be compared at <br />
    *   alternative: the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
 <br />
 
-@Independent Samples T-test <br />
+**@Independent Samples T-test** <br />
+*Performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf* <br />
 route: `/indSampleTTest` <br/>
-description: performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf <br />
 parameters: <br />
    *   categoricalData: nominal or ordinal scale values to be tested on <br />
    *   numericData: interval or ratio scale values to be tested on <br />
@@ -51,9 +51,9 @@ parameters: <br />
    *   alternative: the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
 <br />
 
-@Paired Samples T-test <br />
+**@Paired Samples T-test** <br />
+*Performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf* <br />
 route: `/indSampleTTest` <br/>
-description: performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf <br />
 parameters: <br />
    *   preNumericData: interval or ratio scale values to be tested on <br />
    *   postNumericData: interval or ratio scale values to be tested on <br />
