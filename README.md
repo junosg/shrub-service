@@ -53,7 +53,7 @@ alternative| the inequality symbol of the alternative hypothesis (two-sided, les
 **@Independent Samples T-test** <br />
 *Performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf* <br />
 <font size="1.5">
-route: `/indSampleTTest` <br/>
+route: `/indSamplesTTest` <br/>
 parameters: <br />
 Name | Description
 --- | ---
@@ -69,7 +69,7 @@ alternative | the inequality symbol of the alternative hypothesis (two-sided, le
 **@Paired Samples T-test** <br />
 *Performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf* <br />
 <font size="1.5">
-route: `/indSampleTTest` <br/>
+route: `/pairedSamplesTTest` <br/>
 parameters: <br />
 Name | Description
 --- | ---

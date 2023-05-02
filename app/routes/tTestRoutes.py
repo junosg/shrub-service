@@ -8,10 +8,10 @@ tTest = tTestService.TTest
 def oneSampleTTest():
    return tTest.oneSample(request.args.get('numericData'), request.args.get('popMean'), request.args.get('alternative'))
 
-@tTestRoutes.route('/indSampleTTest', methods=['POST'])
+@tTestRoutes.route('/indSamplesTTest', methods=['POST'])
 def indSamplesTTest():
    return tTest.independent(request.args.get('categoricalData'), request.args.get('numericData'), request.args.get('categories'), request.args.get('equalVariance'), request.args.get('alternative'))
 
-@tTestRoutes.route('/pairedSampleTTest', methods=['POST'])
+@tTestRoutes.route('/pairedSamplesTTest', methods=['POST'])
 def pairedSamplesTTest():
    return tTest.paired(request.args.get('preNumericData'), request.args.get('postNumericData'), request.args.get('alternative'))
