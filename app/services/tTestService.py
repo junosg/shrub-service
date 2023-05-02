@@ -10,17 +10,17 @@ class TTest:
         
         return list
 
-    def oneSample(dataValues, popMean, alternative):
-        valuesList = TTest.listValues(dataValues)
+    def oneSample(numericData, popMean, alternative):
+        valuesList = TTest.listValues(numericData)
 
         tStatistic, pValue = stats.ttest_1samp(a=valuesList, popmean=float(popMean), alternative=alternative)
         return jsonify(tStatistic = tStatistic, pValue = pValue) 
     
-    def independent(groupValues, dataValues, groups, equalVariance, alternative):
-        groupsList = groupValues.split(',')
-        groups = groups.split(',')
+    def independent(categoricalData, numericData, categories, equalVariance, alternative):
+        groupsList = categoricalData.split(',')
+        groups = categories.split(',')
 
-        valuesList = TTest.listValues(dataValues)
+        valuesList = TTest.listValues(numericData)
 
         data = pandas.DataFrame({'group':groupsList, 'value':valuesList}) 
 
@@ -31,13 +31,10 @@ class TTest:
 
         return jsonify(tStatistic = tStatistic, pValue = pValue, leftHand=groups[0], rightHand=groups[1])
 
-    def paired(preDataValues, postDataValues, alternative):
-        preDataValues = TTest.listValues(preDataValues)
-        postDataValues = TTest.listValues(postDataValues)
+    def paired(preNumericData, postNumericData, alternative):
+        preNumericData = TTest.listValues(preNumericData)
+        postNumericData = TTest.listValues(postNumericData)
 
-        tStatistic, pValue = stats.ttest_rel(preDataValues, postDataValues, alternative=alternative)
+        tStatistic, pValue = stats.ttest_rel(preNumericData, postNumericData, alternative=alternative)
 
         return jsonify(tStatistic = tStatistic, pValue = pValue)
-
-        
-        

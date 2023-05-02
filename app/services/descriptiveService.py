@@ -1,8 +1,8 @@
 import pandas
 
 class Descriptive:
-    def summary(values, scale):
-        valuesList = values.split(",")
+    def summary(numericData, scale):
+        valuesList = numericData.split(",")
 
         if scale == 'ordinal' or scale == 'ratio':
             valuesList = [eval(value) for value in valuesList]
