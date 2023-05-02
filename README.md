@@ -22,43 +22,64 @@ A free, student-friendly, statistical tool.
 ___
 **@Summary** <br />
 *Describes the leaf (dataset)* <br />
+<font size="1.5">
 route: `/summary` <br />
 parameters: <br />
-   *    data: the data to be described <br />
-   *    scale: the level of measurement of the data **( nominal, ordinal, interval, ratio )** <br />
+Name | Description
+--- | ---
+data | the data to be described <br />
+scale | the level of measurement of the data **( nominal, ordinal, interval, ratio )** <br />
+
 <br />
+</font>
 
 ### Inferential Statistics ###
 ___
 ### T-Test ###
 **@One Sample T-test** <br />
 *Performs one sample t-test on a specified interval or ratio leaf* <br />
+<font size="1.5">
 route: `/oneSampleTTest` <br/> 
 parameters: <br />
-   *   numericData: interval or ratio scale values to be tested on <br />
-   *   popMean: population mean to be compared at <br />
-   *   alternative: the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
+Name | Description
+--- | ---
+numericData| interval or ratio scale values to be tested on <br />
+popMean| population mean to be compared at <br />
+alternative| the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
+
 <br />
+</font>
 
 **@Independent Samples T-test** <br />
 *Performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf* <br />
+<font size="1.5">
 route: `/indSampleTTest` <br/>
 parameters: <br />
-   *   categoricalData: nominal or ordinal scale values to be tested on <br />
-   *   numericData: interval or ratio scale values to be tested on <br />
-   *   categories: the two groups from group values to be compared <br />
-   *   equalVariance: defines if the two groups to be compared has equal variance <br />
-   *   alternative: the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
+Name | Description
+--- | ---
+categoricalData | nominal or ordinal scale values to be tested on <br />
+numericData | interval or ratio scale values to be tested on <br />
+categories | the two groups from group values to be compared <br />
+equalVariance | defines if the two groups to be compared has equal variance <br />
+alternative | the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
+
 <br />
+</font>
 
 **@Paired Samples T-test** <br />
 *Performs independent samples t-test on a specified interval or ratio leaf grouped by a nominal or ordinal leaf* <br />
+<font size="1.5">
 route: `/indSampleTTest` <br/>
 parameters: <br />
-   *   preNumericData: interval or ratio scale values to be tested on <br />
-   *   postNumericData: interval or ratio scale values to be tested on <br />
-   *   alternative: the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
+Name | Description
+--- | ---
+preNumericData | interval or ratio scale values to be tested on <br />
+postNumericData | interval or ratio scale values to be tested on <br />
+alternative | the inequality symbol of the alternative hypothesis (two-sided, less, greater) <br />
+
 <br />
+</font>
+
 
 
 
